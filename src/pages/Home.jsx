@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
-import Card from "../components/card";
+import Card from "../components/Card";
 const Home = () => {
   const [movie, setMovie] = useState([]);
   const options = {
