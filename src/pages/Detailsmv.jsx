@@ -9,10 +9,10 @@ const Detailsmv = () => {
   const { id } = useParams();
   const [mDetail, setDetail] = useState({});
   useEffect(() => {
-        AOS.init({
-          duration: 800,
-          once: true,
-        });
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
     const getMovie = localStorage.getItem("movies");
     const movie = JSON.parse(getMovie);
     console.log(movie);
@@ -25,7 +25,7 @@ const Detailsmv = () => {
   return (
     <div className="bg-gray-950">
       <Navbar></Navbar>
-      <section className="relative pt-20 pb-20"  data-aos="fade-up">>
+      <section className="relative pt-20 pb-20" data-aos="fade-up">
         {/* backdrop */}
         <div
           className="absolute inset-x-0 top-0 h-[80vh] bg-cover bg-center z-0"
