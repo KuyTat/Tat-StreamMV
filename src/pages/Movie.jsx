@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
 import axios from "axios";
-import Card from "../components/card";
+import Card from "../components/Card";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
