@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="bg-[#0a0a12]/90 backdrop-blur-sm border-gray-700 border-b-[0.1px] fixed top-0 w-full h-20 z-50 text-amber-50 flex items-center font-medium px-4 md:px-8">
       <div className="flex justify-between w-full items-center">
         {/* Logo */}
-        <div className="text-orange-600 font-extrabold text-xl md:text-2xl lg:text-3xl">
+        <div className="text-orange-600 font-extrabold text-xl md:text-2xl lg:text-3xl ">
           Tat-StreamMV
         </div>
 

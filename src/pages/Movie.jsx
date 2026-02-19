@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
@@ -21,6 +21,9 @@ const Movie = () => {
     },
   };
   useEffect(() => {
+    if (page > 1) {
+      movieTopRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
     AOS.init({
       duration: 800,
       once: true,
@@ -39,8 +42,10 @@ const Movie = () => {
   const filteredMovies = movie.filter((m) =>
     m.name.toLowerCase().includes(search.toLowerCase()),
   );
+  const movieTopRef = useRef(null);
+
   return (
-    <div className="bg-gray-950">
+    <div className="bg-gray-950   " ref={movieTopRef}>
       <Navbar></Navbar>
       <div className="w-full  bg-gray-950 mb-20">
         \{/* contianer */}
@@ -92,15 +97,21 @@ const Movie = () => {
           </div>
           <div className=" w-[80%] flex justify-between  m-auto mt-5 pb-5 text-amber-50">
             <button
-              onClick={() => setPage((prev) => Math.max(1, prev - 1))}
-              className="items-center text-xl flex px-8 py-3 bg-red-600 rounded-2xl font-semibold text-md hover:blue-red-700 transition-all duration-100 ">
-              <IoIosArrowBack className="text-2xl" />
+              onClick={() => {
+                setPage((prev) => Math.max(1, prev - 1));
+                movieTopRef.current?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="items-center  text-sm md:text-md lg:text-xl flex px-4 md:px5 lg:px-8 py-1.5 md:py-2 lg:py-3 bg-red-600 rounded-2xl font-semibold text-md hover:blue-red-700 transition-all duration-100 ">
+              <IoIosArrowBack className="text-xl  lg:text-2xl" />
               Back
             </button>
             <button
-              onClick={() => setPage((prev) => prev + 1)}
-              className="text-xl flex px-8 py-3 bg-red-600  rounded-2xl font-semibold text-md hover:blue-red-700 transition-all duration-100 items-center">
-              Next <IoIosArrowForward className="text-2xl" />
+              onClick={() => {
+                setPage((prev) => prev + 1);
+                movieTopRef.current?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className=" text-sm md:text-md lg:text-xl flex px-4 md:px5 lg:px-8 py-1.5 md:py-2 lg:py-3 bg-red-600  rounded-2xl font-semibold text-md hover:blue-red-700 transition-all duration-100 items-center">
+              Next <IoIosArrowForward className="text-xl  lg:text-2xl" />
             </button>
           </div>
         </div>

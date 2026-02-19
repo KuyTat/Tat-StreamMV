@@ -138,7 +138,7 @@ const Home = () => {
         <div
           data-aos="fade-up"
           className="w-4/5 m-auto flex-col gap-5 items-center mt-5 bg-gray-950">
-          <div className="w-full flex justify-between">
+          <div className="w-full flex justify-between items-center">
             <h2 className="text-amber-50 font-bold mb-10 mt-10 text-3xl">
               All Movies
             </h2>
@@ -166,7 +166,7 @@ const Home = () => {
             {/* Header */}
             <div className="text-center mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Why Choose CineVerse?
+                Why Choose Tat-StreamMV?
               </h2>
               <p className="text-slate-400 mt-3">
                 The best streaming experience you can find

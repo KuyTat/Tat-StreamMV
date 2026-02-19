@@ -49,10 +49,10 @@ const Contact = () => {
                     <span>
                       <h4 className="font-bold text-lg sm:text-xl">Email Us</h4>
                       <p className="text-gray-400 text-sm sm:text-base">
-                        support@cineverse.com
+                        support@Tat-StreamMV.com
                       </p>
                       <p className="text-gray-400 text-sm sm:text-base">
-                        press@cineverse.com
+                        press@Tat-StreamMV.com
                       </p>
                     </span>
                   </div>
